@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
 text-decoration: none;
+font-family: 'Montserrat', sans-serif;
+}
 
+body{
+    margin:0;
+    background-color: #D3BFA7;
+   
 }
 
 .cabecalho{
@@ -10,6 +17,8 @@ text-decoration: none;
     background-color: #362C1A;
     width:100%;
     height:94px;
+   
+    
 }
 
 .cabecalho > nav{
@@ -19,13 +28,19 @@ text-decoration: none;
     gap:100px;
     color:White;
     margin-top:50px;
+
+
 }
 nav a:hover {
   border-bottom: 2px solid #ffffff; /* cor da linha ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 a {
-    color:white;
+   display: inline-block;
+  color: white;
+  
+
 }
 
 .buscar > input{
@@ -33,13 +48,20 @@ a {
    background-color: transparent;
    width:161px;
    height:30px;
+   outline: none;
+   caret-color: white;
+   caret-shape: bar;
+ color:white;
+ font-size:15Px;
    
 
 }
 
 .buscar > input::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 17px;
+    z-index: 0;
+   
 }
 
 .buscar{
@@ -53,4 +75,158 @@ a {
 }
 .buscar > i{
     color:white;
+}
+
+.corpo1 h1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color:#1A3627;
+    font-size:40px;
+    opacity: 0;
+     animation: surgindo 1.0s ease-out forwards;
+}
+
+.banner{
+    color:white;
+   background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+   url(./img/banner.svg);
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:479px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+ padding:80px;
+ gap:30px;
+opacity: 0;
+  animation: surgindo2 1.5s ease-out 0.8s forwards;
+}
+.banner p{
+ font-size:25px;
+ width:40%;
+ font-weight:bold;
+ opacity: 0;
+   animation: surgindo 1.0s ease-out 2.3s forwards;
+
+}
+.banner h2{
+    font-size:50px;
+    font-weight:bold;
+    margin-top:-25px;
+    margin-left: 73px;
+    opacity: 0;
+    animation: surgindo 1.0s ease-out 1.6s forwards;
+}
+ 
+.txt1{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-between;
+    padding:20px;
+    margin-top:100px;
+     animation: surgindo 1.0s ease-out forwards;
+     opacity: 0;
+ animation: surgirScroll linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+  
+}
+
+
+.txt1>h2{
+    font-size:40px;
+      color:#1A3627;
+       font-weight: bold;
+       
+}
+
+.txt1>p{
+    font-size:25px;
+    color:#1A3627;
+    width:900px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.titulo{
+    color:#1A3627;
+    font-size:25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    margin-top:150px;
+}
+
+.card1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color:rgba(26, 54, 39, 1);
+    width:233px;
+    height:322px;
+    padding:30px;
+    border-radius:30px;
+    color:White;
+    font-weight: bold;
+    font-size:15px;
+}
+.cards{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    margin-top: 100px;
+  margin:50px 170px;
+}
+
+.fundo{
+    margin-top:-100px;
+     background-image: url(./img/fundo.jpg);
+     background-size: contain;
+  background-color: #D3BFA7;
+ background-repeat: repeat;
+ height:1300px;
+}
+
+
+/*---------- ANIMAÇÕES ----------------*/
+
+@keyframes surgindo {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Começa 20px abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    /* Chega na posição original */
+  }
+}
+
+@keyframes surgindo2{
+from {
+    opacity: 0;
+    transform: translatex(300px); 
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);    
+  }
+
+
+}
+
+@keyframes surgirScroll {
+  from {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
