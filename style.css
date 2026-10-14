@@ -10,6 +10,7 @@ body{
    
 }
 
+
 .cabecalho{
     display: flex;
     align-items: center;
@@ -203,7 +204,7 @@ opacity: 0;
 
 
 .popup1{
-  background-color: white;
+  background-color:#F7FFFE;
   width:517px;
   height:800px;
   position:fixed;
@@ -214,6 +215,7 @@ opacity: 0;
   justify-content: space-between;
   align-items:center;
   padding:20px;
+  sc
 }
 .tituloEntrar{
   display:flex;
@@ -221,27 +223,63 @@ opacity: 0;
   align-items: center;
   font-size: 30px;
   font-weight: bold;
+  padding:50px;
 }
 .tituloEntrar i{
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .popup1 input{
-  width:231px; 
-  height:30px;
+  width:260px; 
+  height:40px;
   border:none;
   background-color: #8B8171;
   border-radius:20px;
-}
-
-.popup1 input::placeholder{
   color:white;
-  padding-left:10px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
+  padding: 0 20px;
+  font-size:15px;
+  border:none;
+  
 }
 
+.EmailSenha{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap:80px;
+  margin-top:-70px;
+}
+
+.EmailSenha label{
+  font-weight: bold;
+  font-size:20px;
+  margin-bottom: -70px;
+}
+
+.btnentrar{
+  background-color: #F5610A;
+  border:none;
+  width:231px;
+  height: 50px;
+  border-radius:20px;
+  color:white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.btnentrar:hover{
+  background-color: #F28C18;
+}
+
+.popup1 a{
+  color:black;
+  font-weight: bold;
+  margin-bottom:50px;
+}
+
+.popup1 a:hover{
+   border-bottom: 2px solid black;
+}
 /*---------- ANIMAÇÕES ----------------*/
 
 @keyframes surgindo {
