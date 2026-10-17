@@ -3,6 +3,12 @@
 text-decoration: none;
 font-family: 'Montserrat', sans-serif;
 }
+.container {
+  width: 100%;
+  max-width: 1200px; /* Trava a largura máxima aqui (pode ser 1280px ou 1440px) */
+  margin: 0 auto;    /* Centraliza o bloco perfeitamente no meio da tela */
+  padding: 0 20px;   /* Evita colar nas bordas laterais */
+}
 
 html, body {
   scrollbar-width: none;       /* Firefox */
@@ -212,8 +218,11 @@ opacity: 0;
   background-color: #D3BFA7;
  background-repeat: repeat;
  height:1300px;
+  height: auto !important;     /* Remove a trava de 1300px */
+  min-height: 100vh;           /* Garante que ocupe ao menos a tela toda se tiver pouco conteúdo */
+  padding-bottom: 80px;        /* Dá um respiro antes do rodapé */
+  overflow: hidden;            /* Evita vazamentos de margem */
 }
-
 
 .Entrar{
   display:flex;
@@ -417,7 +426,7 @@ opacity: 0;
   font-size:40px;
 }
 
-.cards{
+.cardsPg2{
   width:240px;
   height:300px;
   background-color: #1A3627;
@@ -430,14 +439,19 @@ opacity: 0;
  align-items: center;
  justify-content: space-around;
  font-size:20px;
+ box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.50);
+ cursor:pointer;
  
 }
+.cardsPg2:hover{
+  transform:translateY(-20px);
+}
 
-.cards i{
+.cardsPg2 i{
   font-size:60px;
   margin-top:60px;
 }
- .cards p{
+ .cardsPg2 p{
   margin-bottom: 40px;
  }
 
@@ -445,13 +459,157 @@ opacity: 0;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
-padding:50px;
+  justify-content:space-between;
+   padding:50px;
+
 }
 .grupo1,.grupo2{
  display:grid;
  grid-template-columns: repeat(3,1fr);
- 
+gap:200px;
+margin-bottom: 50px;;
+}
+
+/* ===================================================
+   RODAPÉ (FOOTER)
+   =================================================== */
+
+.rodape {
+  background-color: #362C1A; /* Mesmo tom escuro do teu cabeçalho */
+  color: #FFFFFF;
+  padding: 40px 60px 25px;
+  font-family: 'Montserrat', sans-serif;
+   position: relative;
+  clear: both;
+  width: 100%;
+}
+
+.rodape a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.rodape a:hover {
+  opacity: 0.8;
+}
+
+.rodape-superior {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+/* Coluna de Logos */
+.rodape-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 140px;
+}
+
+.logo-petmatch {
+  max-width: 130px;
+  height: auto;
+}
+
+.logo-senai {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Colunas de Conteúdo */
+.rodape-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rodape-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titulo-sociais {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.redes-sociais a {
+  font-size: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Linha divisória horizontal */
+.rodape-divisor {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 35px 0 20px;
+}
+
+/* Faixa inferior */
+.rodape-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.copyright {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.links-legais {
+  display: flex;
+  gap: 35px;
+}
+
+.links-legais a {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  .rodape {
+    padding: 30px 20px 20px;
+  }
+
+  .rodape-superior {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .rodape-coluna {
+    gap: 15px;
+  }
+
+  .rodape-inferior {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .links-legais {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /*---------- ANIMAÇÕES ----------------*/
@@ -587,5 +745,79 @@ from {
 
   .cards {
     flex-direction: column;
+  }
+}
+
+/* ===================================================
+   RESPONSIVIDADE: PAGINA 2
+   =================================================== */
+
+/* 1. Telas Médias e Notebooks (até 1200px) */
+/* Reduz o gap gigante de 200px para caber sem quebrar a tela */
+@media (max-width: 1200px) {
+  .Principal {
+    padding: 30px 20px;
+  }
+
+  .grupo1,
+  .grupo2 {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+/* 2. Tablets (até 900px) - passa de 3 colunas para 2 colunas */
+@media (max-width: 900px) {
+  .grupo1,
+  .grupo2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* 3. Celulares e Telas Menores (até 600px) - 100% UM EMBAIXO DO OUTRO */
+@media (max-width: 600px) {
+  .Principal {
+    padding: 20px 15px;
+  }
+
+  .usuario {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .usuario i {
+    font-size: 32px;
+  }
+
+  /* Força 1 coluna única: todos os cards empilhados na vertical */
+  .grupo1,
+  .grupo2 {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .cardsPg2 {
+    width: 100%;
+    max-width: 260px;
+    height: 280px;
+  }
+
+  .cardsPg2 i {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+
+  .cardsPg2 p {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  /* Suaviza o hover no mobile para não travar o clique */
+  .cardsPg2:hover {
+    transform: translateY(-8px);
   }
 }
