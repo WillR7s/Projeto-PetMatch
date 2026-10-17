@@ -4,10 +4,30 @@ text-decoration: none;
 font-family: 'Montserrat', sans-serif;
 }
 
+html, body {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE e Edge antigo */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;               /* Chrome, Edge, Safari e Opera */
+}
+
 body{
     margin:0;
     background-color: #D3BFA7;
-   
+    scrollbar-width: none;  
+  -ms-overflow-style: none; 
+}
+
+/* 1. Trava o scroll da página quando o modal estiver ativo */
+body.travar-scroll {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar{
+  display:none;
 }
 
 
@@ -200,8 +220,21 @@ opacity: 0;
   flex-direction: column;
   align-items: center;
   padding:20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position:fixed;
+  inset:0;
+  z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.Entrar.ativo{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+}
 
 .popup1{
   background-color:#F7FFFE;
@@ -215,7 +248,11 @@ opacity: 0;
   justify-content: space-between;
   align-items:center;
   padding:20px;
-  sc
+  margin-top:50px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  position: relative; /* Mantém o conteúdo estável dentro do modal */
+
 }
 .tituloEntrar{
   display:flex;
