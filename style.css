@@ -417,8 +417,42 @@ opacity: 0;
   font-size:40px;
 }
 
+.cards{
+  width:240px;
+  height:300px;
+  background-color: #1A3627;
+  font-size:15px;
+  font-weight: bold;
+ color:white;
+ border-radius:20px;
+ display:flex;
+ flex-direction:column;
+ align-items: center;
+ justify-content: space-around;
+ font-size:20px;
+ 
+}
 
+.cards i{
+  font-size:60px;
+  margin-top:60px;
+}
+ .cards p{
+  margin-bottom: 40px;
+ }
 
+.Principal{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+padding:50px;
+}
+.grupo1,.grupo2{
+ display:grid;
+ grid-template-columns: repeat(3,1fr);
+ 
+}
 
 /*---------- ANIMAÇÕES ----------------*/
 
