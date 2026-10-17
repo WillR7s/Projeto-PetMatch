@@ -295,7 +295,7 @@ opacity: 0;
 .Nomecadastro{
   display:flex;
   flex-direction:column;
-  align-itens:center;
+  align-items:center;
   Justify-content:space-around;
 
 }
@@ -387,7 +387,7 @@ opacity: 0;
   font-size: 20px;
   font-weight: bold;
   margin-top:40px;
-  margin-left:30px;
+  
 }
 .btnCadastrar:hover{
   background-color: #F28C18;
@@ -402,6 +402,24 @@ opacity: 0;
 .popup1 a:hover{
    border-bottom: 2px solid black;
 }
+
+/*------------------------------------- Pagina2 -------------------------------------------------*/
+
+.usuario{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  Margin-top:30px;
+  font-size:20px;
+  color:white;
+}
+.usuario i{
+  font-size:40px;
+}
+
+
+
+
 /*---------- ANIMAÇÕES ----------------*/
 
 @keyframes surgindo {
