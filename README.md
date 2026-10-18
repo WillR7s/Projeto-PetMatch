@@ -30,7 +30,9 @@
 
 ## 🎯 Sobre o Projeto
 
-O **PetMatch** nasceu com o objetivo de aproximar a comunidade de causas animais por meio de uma plataforma simples, acessível e visualmente acolhedora. Com paleta em tons terrosos, animações suaves e navegação intuitiva, o sistema organiza desde processos de adoção até a inscrição de voluntários e parcerias com o **SENAI**[cite: 1].
+O **PetMatch** nasceu com o objetivo de aproximar a comunidade de causas animais por meio de uma plataforma simples, acessível e visualmente acolhedora. Com paleta em tons terrosos, animações suaves e navegação intuitiva, o sistema organiza desde processos de adoção até a inscrição de voluntários e parcerias com o **SENAI**.
+
+Link do projeto: https://willr7s.github.io/Projeto-PetMatch/ .
 
 <br/>
 
