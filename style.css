@@ -726,6 +726,7 @@ from {
     padding: 20px 10px;
     flex-direction: column;
     gap: 20px;
+        width:100%;
   }
 
   .cabecalho > nav {
@@ -737,6 +738,8 @@ from {
   .banner {
     padding: 40px 20px;
     height: auto;
+    width:100%;
+    
   }
 
   .banner h2 {
@@ -745,13 +748,16 @@ from {
   }
 
   .banner p {
-    width: 100%;
+    width: 80%;
     font-size: 18px;
   }
   .corpo1 h1{
     display:flex;
     align-items:center;
     text-align: center;
+  }
+  .adotados{
+    margin-top:-50px;
   }
 
   .popup1 {
